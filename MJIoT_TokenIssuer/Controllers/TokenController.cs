@@ -28,7 +28,7 @@ namespace MJIoT_TokenIssuer.Controllers
                     //new Claim(ClaimTypes.Name, request.Username),
                     new Claim("iss", "MJIoT Authentication Service"),
                     new Claim("sub", userId.Value.ToString()),
-                    new Claim("exp", DateTimeOffset.UtcNow.AddHours(1).ToUnixTimeSeconds().ToString()),
+                    new Claim("exp", DateTimeOffset.UtcNow.AddMonths(6).ToUnixTimeSeconds().ToString()),
                 };
 
                 //var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(GetPrivateKey()));

@@ -21,7 +21,7 @@ namespace MJIoT_TokenIssuer
         public TokenManager()
         {
             //_certificateLoader = new LocalCertificateLoader();
-            _certificateLoader = new AzureCertificateLoader();
+            _certificateLoader = new LocalCertificateLoader();
         }
 
         private void HS256Test()
